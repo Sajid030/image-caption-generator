@@ -1,6 +1,6 @@
 # Image Caption Generation using Deep Learning
 
-[![GitHub license](https://img.shields.io/github/license/your-username/your-repo)](https://github.com/Sajid030/image-captioning/blob/main/LICENSE)
+[![GitHub license](https://img.shields.io/github/license/Sajid030/image-captioning)](https://github.com/Sajid030/image-captioning/blob/master/LICENSE.md)
 [![Python](https://img.shields.io/badge/-Python-3776AB?logo=python&logoColor=white)](https://www.python.org/)
 [![TensorFlow](https://img.shields.io/badge/-TensorFlow-FF6F00?logo=tensorflow&logoColor=white)](https://www.tensorflow.org/)
 ![Pandas](https://img.shields.io/badge/-Pandas-150458?logo=pandas&logoColor=white)
