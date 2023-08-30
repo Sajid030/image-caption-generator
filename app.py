@@ -3,13 +3,13 @@ import numpy as np
 import pickle
 import tensorflow as tf
 from tensorflow.keras.models import Model
-from tensorflow.keras.applications.vgg16 import VGG16, preprocess_input
+from tensorflow.keras.applications.mobilenet_v2 import MobileNetV2, preprocess_input
 from tensorflow.keras.preprocessing.image import load_img, img_to_array
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 
-# Load VGG16 model
-vgg_model = VGG16()
-vgg_model = Model(inputs=vgg_model.inputs, outputs=vgg_model.layers[-2].output)
+# Load MobileNetV2 model
+mobilenet_model = MobileNetV2(weights="imagenet")
+mobilenet_model = Model(inputs=mobilenet_model.inputs, outputs=mobilenet_model.layers[-2].output)
 
 # Load your trained model
 model = tf.keras.models.load_model('mymodel.h5')
@@ -45,7 +45,7 @@ if uploaded_image is not None:
         image = preprocess_input(image)
 
         # Extract features using VGG16
-        image_features = vgg_model.predict(image, verbose=0)
+        image_features = mobilenet_model.predict(image, verbose=0)
 
         # Max caption length
         max_caption_length = 34
@@ -76,5 +76,10 @@ if uploaded_image is not None:
         # Remove startseq and endseq
         generated_caption = generated_caption.replace("startseq", "").replace("endseq", "")
 
-    # Display the generated caption
-    st.write(generated_caption)
+    # Display the generated caption with custom styling
+    st.markdown(
+        f'<div style="border-left: 6px solid #ccc; padding: 5px 20px; margin-top: 20px;">'
+        f'<p style="font-style: italic;">“{generated_caption}”</p>'
+        f'</div>',
+        unsafe_allow_html=True
+    )
