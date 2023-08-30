@@ -21,14 +21,14 @@
 
 ## Demo
 
-- Link: 
+- Link: https://imgcaptiongen.streamlit.app/
 
 `Note:` If the website link provided above is not working, it might mean that the deployment has been stopped or there are technical issues. We apologize for any inconvenience.
 
 - Please consider giving a ⭐ to the repository if you find this app useful.
 - A quick preview of the **Image Caption Generator** app:
 
-![Caption Generator Demo](demo.gif)
+![Caption Generator Demo](resource/demo.gif)
 
 ## Overview
 
@@ -55,7 +55,7 @@ Download the dataset from [Kaggle](https://www.kaggle.com/adityajn105/flickr8k) 
 
 ## Installation
 
-This project is written in Python 3.11.4. If you don't have Python installed, you can download it from the [official website](https://www.python.org/downloads/). If you have an older version of Python, you can upgrade it using the pip package manager, which should be already installed if you have Python 2 >=2.7.9 or Python 3 >=3.4 on your system.
+This project is written in Python 3.10.12. If you don't have Python installed, you can download it from the [official website](https://www.python.org/downloads/). If you have an older version of Python, you can upgrade it using the pip package manager, which should be already installed if you have Python 2 >=2.7.9 or Python 3 >=3.4 on your system.
 To install the required packages and libraries, you can use pip and the provided requirements.txt file. First, clone this repository to your local machine using the following command:
 ```
 https://github.com/Sajid030/image-captioning.git
